@@ -1,0 +1,97 @@
+crop,symptoms,label
+Rice,"dead hearts in vegetative stage",Rice Stem Borer
+Rice,"white ear heads during reproductive stage",Rice Stem Borer
+Rice,"central shoots are drying",Rice Stem Borer
+Rice,"dead central shoots in rice",Rice Stem Borer
+Rice,"white heads appear in rice",Rice Stem Borer
+Rice,"stem damage and drying leaves",Rice Stem Borer
+Rice,"rice stems have holes and damage",Rice Stem Borer
+Rice,"young rice shoots are drying",Rice Stem Borer
+Rice,"central leaf dries while surrounding leaves remain green",Rice Stem Borer
+Rice,"dead hearts and white ears in rice",Rice Stem Borer
+Rice,"rice stem is damaged by larvae",Rice Stem Borer
+Rice,"shoots wilt and dry from inside",Rice Stem Borer
+Rice,"yellowing and drying of plants in patches",Brown Planthopper
+Rice,"rice plants are yellow and dry in patches",Brown Planthopper
+Rice,"yellow plants with drying leaves",Brown Planthopper
+Rice,"plants drying in irregular patches",Brown Planthopper
+Rice,"hopper burn with yellowing plants",Brown Planthopper
+Rice,"rice leaves turn yellow and plants dry",Brown Planthopper
+Rice,"patches of yellow rice plants",Brown Planthopper
+Rice,"rice plants become dry and yellow from the base",Brown Planthopper
+Rice,"yellowing begins in small patches",Brown Planthopper
+Rice,"rice crop shows hopper burn",Brown Planthopper
+Rice,"leaves yellow and plants eventually dry",Brown Planthopper
+Rice,"large areas of rice show yellowing and drying",Brown Planthopper
+Rice,"spindle shaped lesions on rice leaves",Rice Blast
+Rice,"spindle shaped spots on leaves",Rice Blast
+Rice,"lesions on rice leaves",Rice Blast
+Rice,"neck lesions on rice panicles",Rice Blast
+Rice,"panicle and neck lesions",Rice Blast
+Rice,"dark spindle shaped marks on leaves",Rice Blast
+Rice,"rice leaves have diamond shaped lesions",Rice Blast
+Rice,"spots appear on rice leaves",Rice Blast
+Rice,"lesions with gray centers on rice leaves",Rice Blast
+Rice,"blast symptoms on rice leaves",Rice Blast
+Rice,"rice neck turns diseased near panicle",Rice Blast
+Rice,"leaf lesions with pointed ends",Rice Blast
+Wheat,"small insects on wheat leaves",Aphids
+Wheat,"aphids on wheat spikes",Aphids
+Wheat,"leaves curl because of small insects",Aphids
+Wheat,"wheat leaves become yellow and curled",Aphids
+Wheat,"small insects feed on wheat leaves",Aphids
+Wheat,"insects present on wheat spikes",Aphids
+Wheat,"yellowing and curling caused by aphids",Aphids
+Wheat,"tiny insects clustered on wheat leaves",Aphids
+Wheat,"aphids visible on wheat stems",Aphids
+Wheat,"wheat spikes have small sucking insects",Aphids
+Wheat,"leaves curl and yellow after insect attack",Aphids
+Wheat,"small green insects on wheat plants",Aphids
+Wheat,"rust colored pustules on wheat leaves",Wheat Rust
+Wheat,"yellow orange pustules on leaves",Wheat Rust
+Wheat,"orange rust spots on wheat",Wheat Rust
+Wheat,"brown rust marks on wheat leaves",Wheat Rust
+Wheat,"rust colored spots cover wheat leaves",Wheat Rust
+Wheat,"yellow orange lesions on wheat",Wheat Rust
+Wheat,"orange brown pustules appear on leaves",Wheat Rust
+Wheat,"wheat leaves have rust infection",Wheat Rust
+Wheat,"powdery orange spots on wheat leaves",Wheat Rust
+Wheat,"rust pustules on upper leaf surface",Wheat Rust
+Wheat,"brown orange spots spreading across leaves",Wheat Rust
+Wheat,"wheat foliage covered with rust colored marks",Wheat Rust
+Tomato,"holes in tomato fruits",Fruit Borer
+Tomato,"caterpillar feeding inside tomato fruit",Fruit Borer
+Tomato,"holes with caterpillar inside fruit",Fruit Borer
+Tomato,"tomato fruits damaged from inside",Fruit Borer
+Tomato,"large holes in tomato fruits",Fruit Borer
+Tomato,"fruit contains caterpillar larvae",Fruit Borer
+Tomato,"caterpillar damage on tomato fruit",Fruit Borer
+Tomato,"tomato fruit has feeding holes",Fruit Borer
+Tomato,"worms found inside tomato fruits",Fruit Borer
+Tomato,"fruit borer damage in tomato",Fruit Borer
+Tomato,"young fruits have holes",Fruit Borer
+Tomato,"tomatoes are damaged by caterpillars",Fruit Borer
+Tomato,"small white insects under leaves",Whitefly
+Tomato,"white insects on underside of leaves",Whitefly
+Tomato,"leaves turn yellow and curl",Whitefly
+Tomato,"tiny white insects fly from leaves",Whitefly
+Tomato,"whiteflies present below tomato leaves",Whitefly
+Tomato,"yellow curling tomato leaves with insects",Whitefly
+Tomato,"small white insects sucking plant sap",Whitefly
+Tomato,"tomato leaves become yellow due to whiteflies",Whitefly
+Tomato,"white insects clustered under leaves",Whitefly
+Tomato,"leaves curl upward with white insects",Whitefly
+Tomato,"tiny flying insects around tomato plants",Whitefly
+Tomato,"whitefly infestation causes leaf yellowing",Whitefly
+Tomato,"dark spots with concentric rings",Early Blight
+Tomato,"dark circular spots on older leaves",Early Blight
+Tomato,"concentric rings on tomato leaves",Early Blight
+Tomato,"brown spots with circular rings",Early Blight
+Tomato,"older leaves develop dark lesions",Early Blight
+Tomato,"tomato leaves have target shaped spots",Early Blight
+Tomato,"dark lesions spreading on older leaves",Early Blight
+Tomato,"brown circular marks on tomato leaves",Early Blight
+Tomato,"concentric dark rings on leaves",Early Blight
+Tomato,"early blight spots on tomato foliage",Early Blight
+Tomato,"older tomato leaves have brown ringed spots",Early Blight
+Tomato,"dark target-like lesions on leaves",Early Blight
