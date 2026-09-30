@@ -6,9 +6,7 @@ from database.db import get_db
 from models.models import Crop, PestDisease, ProductPrice
 from ml.predict import predict_disease
 
-import urllib.request
-import urllib.parse
-import json
+import requests
 
 
 router = APIRouter(
@@ -28,29 +26,33 @@ class AdviceRequest(BaseModel):
 
 def get_weather(location):
     try:
-        encoded_location = urllib.parse.quote(location)
+        geocode_url = "https://geocoding-api.open-meteo.com/v1/search"
 
-        geocode_url = (
-            "https://geocoding-api.open-meteo.com/v1/search"
-            f"?name={encoded_location}"
-            "&count=1"
-            "&language=en"
-            "&format=json"
+        geo_response = requests.get(
+            geocode_url,
+            params={
+                "name": location,
+                "count": 1,
+                "language": "en",
+                "format": "json"
+            },
+            timeout=10,
+            headers={
+                "User-Agent": "AI-Crop-Care-Advisor/1.0"
+            }
         )
 
-        with urllib.request.urlopen(
-            geocode_url,
-            timeout=10
-        ) as response:
+        geo_response.raise_for_status()
 
-            geo_data = json.loads(
-                response.read().decode()
-            )
+        geo_data = geo_response.json()
 
         if not geo_data.get("results"):
             return {
                 "available": False,
-                "message": "Weather data could not be found for this location."
+                "message": (
+                    "Weather data could not be found "
+                    "for this location."
+                )
             }
 
         place = geo_data["results"][0]
@@ -58,26 +60,38 @@ def get_weather(location):
         latitude = place["latitude"]
         longitude = place["longitude"]
 
-        weather_url = (
-            "https://api.open-meteo.com/v1/forecast"
-            f"?latitude={latitude}"
-            f"&longitude={longitude}"
-            "&current=temperature_2m,relative_humidity_2m,"
-            "precipitation,wind_speed_10m"
-            "&daily=precipitation_probability_max,"
-            "precipitation_sum"
-            "&forecast_days=1"
-            "&timezone=auto"
+        weather_url = "https://api.open-meteo.com/v1/forecast"
+
+        weather_response = requests.get(
+            weather_url,
+            params={
+                "latitude": latitude,
+                "longitude": longitude,
+                "current": (
+                    "temperature_2m,"
+                    "relative_humidity_2m,"
+                    "precipitation,"
+                    "rain,"
+                    "showers,"
+                    "wind_speed_10m"
+                ),
+                "daily": (
+                    "precipitation_probability_max,"
+                    "precipitation_sum,"
+                    "temperature_2m_max"
+                ),
+                "forecast_days": 1,
+                "timezone": "auto"
+            },
+            timeout=10,
+            headers={
+                "User-Agent": "AI-Crop-Care-Advisor/1.0"
+            }
         )
 
-        with urllib.request.urlopen(
-            weather_url,
-            timeout=10
-        ) as response:
+        weather_response.raise_for_status()
 
-            weather_data = json.loads(
-                response.read().decode()
-            )
+        weather_data = weather_response.json()
 
         current = weather_data["current"]
         daily = weather_data["daily"]
@@ -177,8 +191,18 @@ def get_weather(location):
             "alerts": alerts
         }
 
+    except requests.RequestException as error:
+        print("Weather API error:", error)
+
+        return {
+            "available": False,
+            "message": (
+                "Weather service could not be reached."
+            )
+        }
+
     except Exception as error:
-        print("Weather error:", error)
+        print("Weather processing error:", error)
 
         return {
             "available": False,
@@ -504,9 +528,7 @@ def get_advice(
                     "fungal diseases."
                 )
 
-            elif (
-                rain_probability >= 70
-            ):
+            elif rain_probability >= 70:
 
                 smart_advisory = (
                     "🌧️ Rain Advisory: Rain is "
