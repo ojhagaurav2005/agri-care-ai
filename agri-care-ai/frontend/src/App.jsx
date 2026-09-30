@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Chatbot from "./components/Chatbot";
 
-const API_URL = "https://agrii-care-ai.onrender.com
+const API_URL = "https://agrii-care-ai.onrender.com";
 
 const translations = {
   en: {
